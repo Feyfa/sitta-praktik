@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173b66">
+    <title>Masuk | SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="login" class="login-page">
+    <main class="login-layout">
+        <section class="login-card" aria-labelledby="login-title">
+            <p class="eyebrow">Portal mahasiswa</p>
+            <h2 id="login-title">Masuk ke akun</h2>
+            <p class="section-intro">Masukkan email dan kata sandi akun Anda.</p>
+
+            <form id="login-form" class="form-stack">
+                <div class="form-field">
+                    <label for="login-email">Email</label>
+                    <input
+                        id="login-email"
+                        name="email"
+                        type="email"
+                        autocomplete="username"
+                        placeholder="nama@email.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-field">
+                    <label for="login-password">Password</label>
+                    <input
+                        id="login-password"
+                        name="password"
+                        type="password"
+                        autocomplete="current-password"
+                        placeholder="Masukkan password"
+                        required
+                    >
+                    <button
+                        class="text-button password-reset-button"
+                        id="forgot-password-trigger"
+                        type="button"
+                        data-open-modal="forgot-modal"
+                    >
+                        Lupa password?
+                    </button>
+                </div>
+
+                <button class="button button-primary button-full" type="submit">Masuk</button>
+            </form>
+
+            <p class="register-prompt">
+                Belum punya akun?
+                <button
+                    class="text-button"
+                    id="register-trigger"
+                    type="button"
+                    data-open-modal="register-modal"
+                >
+                    Daftar
+                </button>
+            </p>
+        </section>
+    </main>
+
+    <!-- MODAL LOGIN DIMUAT DARI FOLDER COMPONENT -->
+    <div id="login-modals-placeholder"></div>
+</body>
+</html>

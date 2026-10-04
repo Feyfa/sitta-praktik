@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173b66">
+    <title>Tracking Pengiriman | SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="tracking">
+    <div id="navbar-placeholder"></div>
+
+    <main class="page-shell">
+        <section class="page-intro">
+            <p class="eyebrow">Layanan pengiriman</p>
+            <h1>Tracking Pengiriman</h1>
+            <p class="muted-copy">Masukkan nomor Delivery Order untuk melihat status dan detail pengiriman.</p>
+        </section>
+
+        <section class="panel search-panel" aria-labelledby="search-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Pencarian pesanan</p>
+                    <h2 id="search-title">Cari nomor DO</h2>
+                </div>
+            </div>
+            <form id="tracking-form" class="search-form">
+                <div class="form-field search-field">
+                    <label for="tracking-number">Nomor Delivery Order</label>
+                    <input
+                        id="tracking-number"
+                        name="nomorDO"
+                        type="text"
+                        inputmode="numeric"
+                        autocomplete="off"
+                        placeholder="Contoh: 2023001234"
+                        required
+                    >
+                </div>
+                <button class="button button-primary" type="submit">Cari</button>
+            </form>
+            <p class="form-feedback" id="tracking-feedback" role="alert" hidden></p>
+        </section>
+
+        <section class="panel tracking-result" id="tracking-result" aria-live="polite" hidden>
+            <div class="order-heading">
+                <div>
+                    <p class="eyebrow">Nomor DO <span id="result-number"></span></p>
+                    <h2 id="result-name"></h2>
+                </div>
+                <span class="status-badge" id="result-status"></span>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-heading">
+                    <strong>Status perjalanan</strong>
+                    <span id="progress-label"></span>
+                </div>
+                <div
+                    class="progress-track"
+                    id="progress-track"
+                    role="progressbar"
+                    aria-label="Progres pengiriman"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="0"
+                >
+                    <span class="progress-bar" id="progress-bar"></span>
+                </div>
+            </div>
+
+            <dl class="details-grid" id="tracking-details"></dl>
+
+            <div class="timeline-heading">
+                <div>
+                    <p class="eyebrow">Perjalanan paket</p>
+                    <h3>Riwayat pengiriman</h3>
+                </div>
+            </div>
+            <ol class="timeline" id="tracking-events"></ol>
+        </section>
+    </main>
+</body>
+</html>

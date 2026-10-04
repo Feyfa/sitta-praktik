@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173b66">
+    <title>Informasi Bahan Ajar | SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="stok">
+    <div id="navbar-placeholder"></div>
+
+    <main class="page-shell">
+        <section class="page-intro page-intro-row">
+            <div>
+                <p class="eyebrow">Katalog bahan ajar</p>
+                <h1>Informasi Stok Bahan Ajar</h1>
+                <p class="muted-copy">Data ditampilkan dari berkas JavaScript contoh.</p>
+            </div>
+            <div class="stock-total">
+                <span>Jumlah jenis bahan ajar</span>
+                <strong id="stock-count">0</strong>
+            </div>
+        </section>
+
+        <section class="panel" aria-labelledby="stock-table-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Daftar bahan ajar</p>
+                    <h2 id="stock-table-title">Stok tersedia</h2>
+                </div>
+            </div>
+            <div class="table-wrap">
+                <table class="stock-table">
+                    <caption class="visually-hidden">Daftar bahan ajar dan jumlah stok</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Sampul</th>
+                            <th scope="col">Kode barang</th>
+                            <th scope="col">Nama bahan ajar</th>
+                            <th scope="col">Kode lokasi</th>
+                            <th scope="col">Jenis / edisi</th>
+                            <th scope="col">Stok</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stock-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel add-stock-panel" aria-labelledby="add-stock-title">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Manipulasi DOM</p>
+                    <h2 id="add-stock-title">Tambah baris stok</h2>
+                </div>
+            </div>
+
+            <form id="stock-form" class="stock-form">
+                <div class="form-field">
+                    <label for="stock-location">Kode lokasi</label>
+                    <input id="stock-location" name="kodeLokasi" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="stock-code">Kode barang</label>
+                    <input id="stock-code" name="kodeBarang" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="stock-name">Nama bahan ajar</label>
+                    <input id="stock-name" name="namaBarang" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="stock-type">Jenis barang</label>
+                    <select id="stock-type" name="jenisBarang" required>
+                        <option value="BMP">BMP</option>
+                        <option value="Non-BMP">Non-BMP</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="stock-edition">Edisi</label>
+                    <input id="stock-edition" name="edisi" type="text" required>
+                </div>
+                <div class="form-field">
+                    <label for="stock-quantity">Jumlah stok</label>
+                    <input id="stock-quantity" name="stok" type="number" min="0" step="1" required>
+                </div>
+                <div class="stock-form-action">
+                    <button class="button button-primary" type="submit">Tambah stok</button>
+                </div>
+            </form>
+            <p class="form-feedback" id="stock-feedback" role="status" aria-live="polite" hidden></p>
+        </section>
+    </main>
+</body>
+</html>

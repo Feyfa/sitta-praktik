@@ -1,0 +1,1024 @@
+/* ===== GAYA GLOBAL DAN VARIABEL WARNA ===== */
+:root {
+    color-scheme: light;
+    --navy: #173b66;
+    --blue: #245b91;
+    --blue-soft: #e9f0f7;
+    --yellow: #e5bc3f;
+    --ink: #253140;
+    --muted: #697788;
+    --line: #dce3ea;
+    --surface: #ffffff;
+    --page: #f3f5f7;
+    --success: #2f765c;
+    --danger: #a63838;
+    --shadow: 0 12px 34px rgba(23, 59, 102, 0.08);
+    font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    line-height: 1.55;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(229, 188, 63, 0.75);
+    outline-offset: 3px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* ===== LOGIN: LATAR DAN STRUKTUR KARTU ===== */
+.login-page {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 36px 24px;
+    background:
+        linear-gradient(135deg, rgba(23, 59, 102, 0.06), transparent 52%),
+        var(--page);
+}
+
+/* PLACEHOLDER MODAL TIDAK MENAMBAH BARIS PADA GRID HALAMAN LOGIN */
+.login-page > #login-modals-placeholder {
+    position: absolute;
+}
+
+.login-layout {
+    width: min(100%, 480px);
+    overflow: hidden;
+    border: 1px solid rgba(23, 59, 102, 0.1);
+    border-radius: 18px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+/* BRAND SITTA DIPAKAI DI LOGIN DAN NAVBAR */
+.brand {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border: 1px solid rgba(229, 188, 63, 0.8);
+    border-radius: 50%;
+    color: var(--yellow);
+    font-size: 0.83rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
+.brand-name {
+    display: grid;
+    gap: 1px;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+}
+
+.brand-name small {
+    font-size: 0.69rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    opacity: 0.78;
+}
+
+/* LABEL KECIL DIPAKAI PADA LOGIN DAN HALAMAN INTERNAL */
+.eyebrow {
+    margin: 0 0 8px;
+    color: var(--blue);
+    font-size: 0.73rem;
+    font-weight: 750;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* KONTEN FORM MASUK */
+.login-card {
+    width: 100%;
+    margin: 0 auto;
+    padding: 48px clamp(28px, 5vw, 58px);
+}
+
+.login-card h2,
+.panel h2,
+.timeline-heading h3 {
+    margin: 0;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+}
+
+.login-card h2 {
+    font-size: 1.9rem;
+}
+
+.login-card > .eyebrow,
+.login-card h2,
+.login-card .section-intro {
+    text-align: center;
+}
+
+.section-intro {
+    margin: 7px 0 26px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.form-stack {
+    display: grid;
+    gap: 17px;
+}
+
+/* FIELD FORM DIGUNAKAN PADA LOGIN, TRACKING, DAN STOK */
+.form-field {
+    min-width: 0;
+    display: grid;
+    gap: 7px;
+}
+
+.form-field label {
+    color: #344356;
+    font-size: 0.84rem;
+    font-weight: 650;
+}
+
+.form-field input,
+.form-field select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #cbd5df;
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--ink);
+}
+
+.form-field input::placeholder {
+    color: #9aa5b1;
+}
+
+/* TOMBOL BERSAMA UNTUK LOGIN, TRACKING, DAN STOK */
+.button {
+    min-height: 43px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 17px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 140ms ease, border-color 140ms ease, transform 140ms ease;
+}
+
+.button:hover {
+    transform: translateY(-1px);
+}
+
+.button-primary {
+    background: var(--navy);
+    color: #ffffff;
+}
+
+.button-primary:hover {
+    background: #102f53;
+}
+
+.button-full {
+    width: 100%;
+    margin-top: 3px;
+}
+
+.button-outline {
+    border-color: #bdcad7;
+    background: #ffffff;
+    color: var(--navy);
+}
+
+.button-outline:hover {
+    border-color: var(--blue);
+    background: var(--blue-soft);
+}
+
+.button-small {
+    min-height: 36px;
+    padding: 7px 12px;
+    font-size: 0.8rem;
+}
+
+.password-reset-button {
+    justify-self: end;
+    font-size: 0.84rem;
+}
+
+.register-prompt {
+    margin: 18px 0 0;
+    color: var(--muted);
+    font-size: 0.84rem;
+    text-align: center;
+}
+
+.text-button {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: var(--blue);
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* ===== LOGIN: MODAL LUPA PASSWORD DAN DAFTAR ===== */
+.modal {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgba(13, 28, 46, 0.58);
+}
+
+.modal-panel {
+    position: relative;
+    width: min(100%, 440px);
+    padding: 30px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 18px 55px rgba(10, 30, 52, 0.2);
+}
+
+.modal-panel h2 {
+    margin: 0 0 9px;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+    font-weight: 600;
+}
+
+.modal-panel p:not(.eyebrow) {
+    margin: 0 0 22px;
+    color: var(--muted);
+}
+
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 13px;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #f1f4f6;
+    color: var(--navy);
+    cursor: pointer;
+    font-size: 1.35rem;
+}
+
+/* ===== NAVBAR DAN IDENTITAS PENGGUNA SETELAH LOGIN ===== */
+.site-header {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(170px, 1fr) auto minmax(170px, 1fr);
+    align-items: center;
+    gap: 22px;
+    min-height: 76px;
+    padding: 12px max(24px, calc((100vw - 1160px) / 2));
+    border-bottom: 1px solid var(--line);
+    background: #ffffff;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-link {
+    padding: 9px 11px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    color: #526174;
+    cursor: pointer;
+    font-size: 0.82rem;
+    font-weight: 650;
+    font-family: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+    background: var(--blue-soft);
+    color: var(--navy);
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] {
+    background: var(--blue-soft);
+    color: var(--navy);
+}
+
+.nav-chevron {
+    display: inline-block;
+    margin-left: 3px;
+    font-size: 0.68rem;
+    transition: transform 140ms ease;
+}
+
+.nav-dropdown-toggle[aria-expanded="true"] .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 6px);
+    left: 0;
+    display: grid;
+    width: max-content;
+    min-width: 240px;
+    max-width: min(320px, calc(100vw - 36px));
+    gap: 4px;
+    padding: 7px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(23, 59, 102, 0.14);
+}
+
+.nav-dropdown-item {
+    width: 100%;
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #526174;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    text-align: left;
+}
+
+.nav-dropdown-item:hover {
+    background: var(--blue-soft);
+    color: var(--navy);
+}
+
+.header-account {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 13px;
+}
+
+.account-name {
+    max-width: 145px;
+    overflow: hidden;
+    color: #536173;
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ===== LAYOUT BERSAMA DASHBOARD, TRACKING, DAN STOK ===== */
+.page-shell {
+    width: min(calc(100% - 48px), 1160px);
+    margin: 0 auto;
+    padding: 38px 0 52px;
+}
+
+/* ===== DASHBOARD: SALAM DAN RINGKASAN DATA ===== */
+.dashboard-welcome {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 30px 36px;
+    border: 1px solid #d8e0e8;
+    border-radius: 10px;
+    background:
+        linear-gradient(105deg, rgba(255, 255, 255, 0.98), rgba(247, 249, 251, 0.92)),
+        var(--surface);
+}
+
+.dashboard-welcome h1,
+.page-intro h1 {
+    margin: 0;
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.dashboard-welcome h1 {
+    font-size: clamp(1.8rem, 4vw, 2.45rem);
+}
+
+.muted-copy {
+    margin: 7px 0 0;
+    color: var(--muted);
+    font-size: 0.91rem;
+}
+
+.welcome-seal {
+    width: 94px;
+    height: 94px;
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    border: 2px solid rgba(229, 188, 63, 0.72);
+    border-radius: 50%;
+    color: var(--blue);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+    margin-top: 20px;
+}
+
+.summary-card {
+    display: grid;
+    gap: 4px;
+    padding: 21px 24px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: #ffffff;
+}
+
+.summary-card-accent {
+    border-top: 3px solid var(--yellow);
+}
+
+.summary-label {
+    color: var(--muted);
+    font-size: 0.8rem;
+}
+
+.summary-value {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.1rem;
+    line-height: 1.1;
+}
+
+/* KOMPONEN PANEL BERSAMA UNTUK TRACKING DAN STOK */
+.panel-heading,
+.timeline-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.panel h2 {
+    font-size: 1.55rem;
+}
+
+/* JUDUL HALAMAN BERSAMA UNTUK TRACKING DAN STOK */
+.page-intro {
+    margin: 0 0 25px;
+}
+
+.page-intro h1 {
+    font-size: clamp(1.9rem, 4vw, 2.45rem);
+}
+
+.page-intro-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.stock-total {
+    min-width: 166px;
+    display: grid;
+    gap: 1px;
+    padding: 11px 16px;
+    border-left: 3px solid var(--yellow);
+    background: #ffffff;
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+.stock-total strong {
+    color: var(--navy);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55rem;
+}
+
+/* PANEL DAN FEEDBACK FORM BERSAMA UNTUK TRACKING DAN STOK */
+.panel {
+    margin-top: 18px;
+    padding: 24px;
+    border: 1px solid var(--line);
+    border-radius: 9px;
+    background: var(--surface);
+    box-shadow: 0 4px 16px rgba(23, 59, 102, 0.035);
+}
+
+.panel-heading {
+    margin-bottom: 18px;
+}
+
+.panel-heading .eyebrow {
+    margin-bottom: 4px;
+}
+
+/* ===== TRACKING PENGIRIMAN: PENCARIAN DAN DETAIL DO ===== */
+.search-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.search-field {
+    width: min(100%, 520px);
+}
+
+.search-form .button {
+    min-width: 108px;
+}
+
+.form-feedback {
+    margin: 12px 0 0;
+    color: var(--success);
+    font-size: 0.84rem;
+    font-weight: 650;
+}
+
+.form-feedback.feedback-error {
+    color: var(--danger);
+}
+
+.tracking-result {
+    padding: clamp(22px, 4vw, 34px);
+}
+
+.order-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.order-heading h2 {
+    color: var(--ink);
+}
+
+.status-badge {
+    display: inline-flex;
+    padding: 6px 11px;
+    border: 1px solid #d1dfd7;
+    border-radius: 999px;
+    background: #edf5f0;
+    color: var(--success);
+    font-size: 0.76rem;
+    font-weight: 750;
+}
+
+.progress-section {
+    margin: 25px 0;
+}
+
+.progress-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 9px;
+    color: #4c5968;
+    font-size: 0.82rem;
+}
+
+.progress-heading span {
+    color: var(--muted);
+}
+
+.progress-track {
+    height: 9px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #e9edf1;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    display: block;
+    border-radius: inherit;
+    background: var(--blue);
+    transition: width 240ms ease;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0;
+    padding: 19px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.details-grid dt {
+    color: var(--muted);
+    font-size: 0.73rem;
+}
+
+.details-grid dd {
+    margin: 3px 0 0;
+    color: var(--ink);
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.timeline-heading {
+    margin-top: 24px;
+}
+
+.timeline-heading h3 {
+    font-size: 1.28rem;
+}
+
+.timeline {
+    display: grid;
+    gap: 0;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline li {
+    position: relative;
+    min-height: 67px;
+    display: grid;
+    grid-template-columns: 155px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+    padding: 0 0 19px 22px;
+    border-left: 1px solid #c6d3df;
+}
+
+.timeline li::before {
+    position: absolute;
+    top: 4px;
+    left: -5px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: var(--blue);
+    content: "";
+}
+
+.timeline li:last-child {
+    min-height: 0;
+    padding-bottom: 0;
+    border-left-color: transparent;
+}
+
+.timeline time {
+    color: var(--muted);
+    font-size: 0.76rem;
+}
+
+.timeline p {
+    margin: 0;
+    color: #465467;
+    font-size: 0.84rem;
+}
+
+/* ===== STOK BAHAN AJAR: TABEL DAN FORM TAMBAH STOK ===== */
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.stock-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.stock-table th,
+.stock-table td {
+    padding: 12px 13px;
+    border-bottom: 1px solid #e6ebf0;
+    vertical-align: middle;
+}
+
+.stock-table th {
+    background: #f4f6f8;
+    color: #526174;
+    font-size: 0.72rem;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.stock-table td {
+    color: #485668;
+    font-size: 0.8rem;
+}
+
+.stock-table tbody tr:hover {
+    background: #fafbfd;
+}
+
+.book-cover {
+    width: 43px;
+    height: 59px;
+    display: block;
+    border: 1px solid #d6dde4;
+    border-radius: 3px;
+    background: #f4f6f8;
+    object-fit: cover;
+}
+
+.code-cell {
+    color: var(--navy) !important;
+    font-weight: 750;
+    white-space: nowrap;
+}
+
+.book-name-cell {
+    min-width: 190px;
+    color: var(--ink) !important;
+    font-weight: 650;
+}
+
+.stock-value {
+    color: var(--navy) !important;
+    font-weight: 750;
+}
+
+.add-stock-panel {
+    margin-top: 25px;
+}
+
+.stock-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.stock-form-action {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    grid-column: 3;
+}
+
+/* UTILITAS AKSESIBILITAS YANG DAPAT DIPAKAI DI SEMUA HALAMAN */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+/* ===== RESPONSIVE NAVBAR UNTUK LAYAR SEDANG ===== */
+@media (max-width: 980px) {
+    .site-header {
+        grid-template-columns: 1fr auto;
+        gap: 8px 16px;
+    }
+
+    .main-nav {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+
+    .header-account {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+}
+
+@media (max-width: 680px) {
+    /* LOGIN */
+    .login-page {
+        padding: 16px;
+    }
+
+    .login-layout {
+        border-radius: 12px;
+    }
+
+    .login-card {
+        padding: 32px 25px;
+    }
+
+    /* NAVBAR */
+    .site-header {
+        padding: 12px 18px;
+    }
+
+    .main-nav {
+        gap: 2px;
+    }
+
+    .nav-link {
+        padding: 8px 9px;
+        font-size: 0.76rem;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        width: min(280px, calc(100vw - 36px));
+        min-width: 0;
+        max-width: none;
+        margin-top: 4px;
+    }
+
+    .page-shell {
+        width: min(calc(100% - 32px), 1160px);
+        padding-top: 27px;
+    }
+
+    /* DASHBOARD */
+    .dashboard-welcome {
+        min-height: 150px;
+        padding: 23px;
+    }
+
+    .welcome-seal {
+        width: 68px;
+        height: 68px;
+        font-size: 1.05rem;
+    }
+
+    .summary-grid {
+        gap: 10px;
+    }
+
+    .summary-card {
+        padding: 16px;
+    }
+
+    .page-intro-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stock-total {
+        width: 100%;
+    }
+
+    /* PANEL BERSAMA UNTUK TRACKING DAN STOK */
+    .panel {
+        padding: 18px;
+    }
+
+    /* TRACKING */
+    .search-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search-field,
+    .search-form .button {
+        width: 100%;
+    }
+
+    .order-heading {
+        flex-direction: column;
+    }
+
+    .details-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .timeline li {
+        grid-template-columns: 1fr;
+        gap: 3px;
+        padding-bottom: 18px;
+    }
+
+    /* STOK */
+    .stock-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .stock-form-action {
+        grid-column: 2;
+    }
+}
+
+@media (max-width: 420px) {
+    /* IDENTITAS PENGGUNA PADA NAVBAR */
+    .brand-mark {
+        width: 36px;
+        height: 36px;
+        font-size: 0.75rem;
+    }
+
+    .brand-name {
+        font-size: 0.89rem;
+    }
+
+    .brand-name small {
+        font-size: 0.64rem;
+    }
+
+    .header-account {
+        gap: 7px;
+    }
+
+    .account-name {
+        max-width: 92px;
+        font-size: 0.72rem;
+    }
+
+    .button-small {
+        min-height: 33px;
+        padding: 6px 9px;
+    }
+
+    /* RINGKASAN DASHBOARD */
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* FORM TAMBAH STOK */
+    .stock-form {
+        grid-template-columns: 1fr;
+    }
+
+    .stock-form-action {
+        grid-column: auto;
+        justify-content: flex-end;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

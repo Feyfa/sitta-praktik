@@ -1,0 +1,39 @@
+<!-- ===== NAVBAR BERSAMA UNTUK HALAMAN SETELAH LOGIN ===== -->
+<header class="site-header">
+    <a class="brand" href="dashboard.html" aria-label="SITTA, kembali ke dashboard">
+        <span class="brand-mark" aria-hidden="true">UT</span>
+        <span class="brand-name">SITTA <small>Universitas Terbuka</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Menu utama">
+        <a class="nav-link" href="dashboard.html" data-page-link="dashboard">Dashboard</a>
+        <a class="nav-link" href="stok.html" data-page-link="stok">Informasi Bahan Ajar</a>
+        <a class="nav-link" href="tracking.html" data-page-link="tracking">Tracking Pengiriman</a>
+        <div class="nav-dropdown">
+            <button
+                class="nav-link nav-dropdown-toggle"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="reports-menu"
+                data-nav-toggle
+            >
+                Laporan <span class="nav-chevron" aria-hidden="true">▾</span>
+            </button>
+            <div class="nav-dropdown-menu" id="reports-menu" role="group" aria-label="Menu Laporan" hidden>
+                <button class="nav-dropdown-item" type="button" data-menu-message="Monitoring Progress DO Bahan Ajar">
+                    Monitoring Progress DO Bahan Ajar
+                </button>
+                <button class="nav-dropdown-item" type="button" data-menu-message="Rekap Bahan Ajar">
+                    Rekap Bahan Ajar
+                </button>
+            </div>
+        </div>
+        <button class="nav-link nav-menu-action" type="button" data-menu-message="Histori Transaksi Bahan Ajar">
+            Histori Transaksi Bahan Ajar
+        </button>
+    </nav>
+    <div class="header-account">
+        <span class="account-name" id="header-user-name">Mahasiswa</span>
+        <button class="button button-outline button-small" type="button" data-logout>Keluar</button>
+    </div>
+</header>

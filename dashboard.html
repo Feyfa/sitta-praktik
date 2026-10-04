@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#173b66">
+    <title>Dashboard | SITTA Universitas Terbuka</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body data-page="dashboard">
+    <div id="navbar-placeholder"></div>
+
+    <main class="page-shell">
+        <section class="dashboard-welcome">
+            <div>
+                <p class="eyebrow">Dashboard mahasiswa</p>
+                <h1 id="greeting-title">Selamat datang</h1>
+                <p class="muted-copy" id="today-date"></p>
+            </div>
+            <div class="welcome-seal" aria-hidden="true"><span>UT</span></div>
+        </section>
+
+        <section class="summary-grid" aria-label="Ringkasan data">
+            <article class="summary-card">
+                <span class="summary-label">Bahan ajar tersedia</span>
+                <strong class="summary-value" id="stock-count">0</strong>
+            </article>
+            <article class="summary-card summary-card-accent">
+                <span class="summary-label">Data pengiriman</span>
+                <strong class="summary-value" id="tracking-count">0</strong>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
